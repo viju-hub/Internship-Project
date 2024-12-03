@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body{
+        overflow-x: hidden;
+      }
+      header{
+        width: 100%;
+        height: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 10%;
+        background: rgba(0,0,0,0.2);
+      }
+      #products{
+        font-weight: 1000;
+      }
+        .logo{
+            font-size: 30px;
+            font-weight: bold;
+            color: #191919;
+            letter-spacing: -3px;
+            cursor:pointer;
+            position: absolute;
+            left:25px
+
+        }
+        nav ol{
+            display: inline-block;
+            list-style: none;
+            padding: 0px 20px;
+            
+        }
+        nav a{
+            text-decoration: none;
+            text-transform: none;
+            color: #121111;
+            font-weight: 999;
+            font-size: 20px;
+            
+        }
+        .small-container{
+            max-width: 1080px;
+            margin: auto;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        .col-4{
+            flex-basis: 25%;
+            padding: 8px;
+            min-width: 200px;
+            margin-bottom: 50px;
+            transition: transform 0.5s;
+            display: inline-block;
+        }
+        .title{
+            text-align: center;
+            margin: 50px auto 50px;
+            position: relative;
+            line-height: 60px;
+            color:#555;
+        }
+        .h4{
+            color: black;
+            font-weight: normal;
+        }
+        .col-4 p{
+            font-size: 14px;
+        }
+        .col-4 .btn{
+            display: inline-block;
+            background: rgb(112, 200, 216) ;
+            color: rgb(80, 78, 78);
+            padding: 0px 10px;
+            margin: 0px 0;
+            width: 100px;
+            height: 40px;
+            border-radius: 20px;
+            text-decoration: none;
+        
+            
+           line-height: 20px;
+        }
+        
+        .col-4 input{
+            width:50px;
+            height: 30px;
+            padding-left: 10px;
+            font-size: 15px;
+            margin-right: 10px ;
+            border: 1px solid #000;
+        }
+        input:focus{
+            outline:none;
+        }
+        .cart-page{
+            margin:80px auto;
+        }
+        table{
+            width:100%;
+            border-collapse: collapse;
+        }
+        .first{
+            min-height: 100vh;
+            width: 100%;
+            background-image:url(../images/2.jpg);
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+        .form-container{
+            background: #fff;
+            width: 400px;
+            height: 450px;
+            position: relative;
+            text-align: center;
+            padding: 20px 0;
+            margin: auto;
+            box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .form-container span{
+            font-weight: bold;
+            padding: 0 10px;
+            color: #000;
+            cursor: pointer;
+            width: 100px;
+            display: inline-block;
+        }
+        .form-btn{
+            display: inline-block;
+        }
+        .form-container form{
+            max-width:400px;
+            padding: 0 20px;
+            position: absolute;
+            top:130px;
+        }
+        form input{
+            width:100%;
+            height: 30px;
+            margin: 10px 0;
+            padding: 0 10px;
+            border: 1px solid #ccc;
+        }
+        form .btn{
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            margin: 10px 0;
+            background: rgb(112, 200, 216) ;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h2>𝓕𝓵𝓸𝓻𝓪𝓵 𝓕𝓵𝓮𝓮𝓽 </h2>
+        </div>
+       
+    </header>
+    <!-----------Products---------->
+    <div class="small-container">
+        <h2 id="products" class="title">Catalogue</h2>
+        <div class="row">
+          
+          <div class="col-4">
+            <form method="post" action="{{url_for('add_to_db')}}">
+            <input type="hidden" value="Pyrenees" id="product_name" name="product_name">
+            <input type="hidden" value="200.00" id="product_price" name="product_price">
+            <img src="../static/pcat1.jpg" width="250px" height="250px" />
+            <h4>Pyrenees</h4>
+            <h4>₹200.00</h4>
+            
+            <input type="number" value="1" name="product_quantity" id="product_quantity"/>
+            <button type="submit" class="btn">Add To Cart</button>
+          </form>
+          </div>
+         
+          <div class="col-4">
+            <form method="post" action="{{url_for('add_to_db')}}">
+              <input type="hidden" value="Sagittarius" id="product_name" name="product_name">
+              <input type="hidden" value="350.00" id="product_price" name="product_price">
+            <img src="../static/pcat2 (1).jpg" width="250px" height="250px" />
+            <h4>Sagittarius</h4>
+            <h4>₹350.00</h4>
+            
+            <input type="number" value="1" name="product_quantity" id="product_quantity" min="1"/>
+            <button type="submit" class="btn">Add To Cart</button>
+            </form>
+          </div>
+          <div class="col-4">
+            <form method="post" action="{{url_for('add_to_db')}}">
+              <input type="hidden" value="Cannes" id="product_name" name="product_name">
+              <input type="hidden" value="150.00" id="product_price" name="product_price">
+            <img src="../static/pcat3.jpg" width="250px" height="250px" />
+            <h4>Cannes</h4>
+            <h4>₹150.00</h4>
+            <p style="position: absolute;bottom:-50px">Quantity</p>
+            <input type="number" value="1" name="product_quantity" id="product_quantity"/>
+            <button type="submit" class="btn">Add To Cart</button>
+            </form>
+          </div>
+          <div class="col-4">
+            <form method="post" action="{{url_for('add_to_db')}}">
+              <input type="hidden" value="Libra" id="product_name" name="product_name">
+              <input type="hidden" value="349.00" id="product_price" name="product_price">
+            <img src="../static/pcat4 (1).jpg" width="250px" height="250px" />
+            <h4>Libra</h4>
+            <h4>₹349.00</h4>
+            
+            <input type="number" value="1" name="product_quantity" id="product_quantity"/>
+            <button type="submit" class="btn">Add To Cart</button>
+            </form>
+          </div>
+          <div class="col-4">
+            <form method="post" action="{{url_for('add_to_db')}}">
+              <input type="hidden" value="Broome" id="product_name" name="product_name">
+              <input type="hidden" value="149.00" id="product_price" name="product_price">
+            <img src="../static/pcat5 (1).jpg" width="250px" height="250px" />
+            <h4>Broome</h4>
+            <h4>₹149.00</h4>
+           
+            <input type="number" value="1" name="product_quantity" id="product_quantity"/>
+            <button type="submit" class="btn">Add To Cart</button>
+            </form>
+          </div>
+          <div class="col-4">
+            <form method="post" action="{{url_for('add_to_db')}}">
+              <input type="hidden" value="Daffodil" id="product_name" name="product_name">
+              <input type="hidden" value="299.00" id="product_price" name="product_price">
+            <img src="../static/flo1.jpg" width="250px" height="250px" />
+            <h4>Daffodil</h4>
+            <h4>₹299.00</h4>
+           
+            <input type="number" value="1" name="product_quantity" id="product_quantity"/>
+            <button type="submit" class="btn">Add To Cart</button>
+            </form>
+          </div>
+          <div class="col-4">
+            <form method="post" action="{{url_for('add_to_db')}}">
+              <input type="hidden" value="Rose" id="product_name" name="product_name">
+              <input type="hidden" value="150.00" id="product_price" name="product_price">
+            <img src="../static/flo2.jpg" width="250px" height="250px" />
+            <h4>Rose</h4>
+            <h4>₹150.00</h4>
+           
+            <input type="number" value="1" name="product_quantity" id="product_quantity"/>
+            <button type="submit" class="btn">Add To Cart</button>
+            </form>
+          </div>
+          <div class="col-4">
+            <form method="post" action="{{url_for('add_to_db')}}">
+              <input type="hidden" value="Gerbera" id="product_name" name="product_name">
+              <input type="hidden" value="399.00" id="product_price" name="product_price">
+            <img src="../static/flo3.jpg" width="250px" height="250px" />
+            <h4>Gerbera</h4>
+            <h4>₹399.00</h4>
+           
+            <input type="number" min="0" value="1" name="product_quantity" id="product_quantity"/>
+            <button type="submit" class="btn">Add To Cart</button>
+            </form>
+          </div>
+          <div class="col-4">
+            <form method="post" action="{{url_for('add_to_db')}}">
+              <input type="hidden" value="Orchid" id="product_name" name="product_name">
+              <input type="hidden" value="699.00" id="product_price" name="product_price">
+            <img src="../static/flo4.jpg" width="250px" height="250px" />
+            <h4>Orchid</h4>
+            <h4>₹699.00</h4>
+          
+            <input type="number" min="0" value="1" name="product_quantity" id="product_quantity"/>
+            <button type="submit" class="btn">Add To Cart</button>
+            </form>
+          </div>
+          <div class="col-4">
+            <form method="post" action="{{url_for('add_to_db')}}">
+              <input type="hidden" value="Lily" id="product_name" name="product_name">
+              <input type="hidden" value="699.00" id="product_price" name="product_price">
+            <img src="../static/flo7.jpg" width="250px" height="250px" />
+            <h4> Lily</h4>
+            <h4>₹699.00</h4>
+            
+            <input type="number" min="0" value="1" name="product_quantity" id="product_quantity"/>
+            <button type="submit" class="btn">Add To Cart</button>
+            </form>
+          </div>
+          <div class="col-4">
+            <form method="post" action="{{url_for('add_to_db')}}">
+              <input type="hidden" value="Hydrangea" id="product_name" name="product_name">
+              <input type="hidden" value="599.00" id="product_price" name="product_price">
+            <img src="../static/flo9.jpg" width="250px" height="250px" />
+            <h4> Hydrangea</h4>
+            <h4>₹599.00</h4>
+           
+            <input type="number" min="0" value="1" name="product_quantity" id="product_quantity"/>
+            <button type="submit" class="btn">Add To Cart</button>
+            </form>
+          </div>
+         
+          <div class="col-4">
+            <form method="post" action="{{url_for('add_to_db')}}">
+              <input type="hidden" value="Passionflower" id="product_name" name="product_name">
+              <input type="hidden" value="1299.00" id="product_price" name="product_price">
+            <img src="../static/flo10.jpg" width="250px" height="250px" />
+            <h4> Dahelia</h4>
+            <h4>₹1299.00</h4>
+            
+            <input type="number" min="0" value="1" name="product_quantity" id="product_quantity"/>
+            <button type="submit" class="btn">Add To Cart</button>
+            </form>
+          </div>
+        </div>
+      </div>
+</body>
+</html

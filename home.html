@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <script src="https://kit.fontawesome.com/5660526553.js" crossorigin="anonymous"></script>
+    <style>
+        body{
+            overflow-x: hidden;
+            
+        }
+        #fimg{
+            height:490px;
+            width: 380px;
+            background-color:#0a0a0a;
+            position: absolute;
+            top:230px;
+            left: 493px;
+            box-shadow: 20px 10px 15px rgba(0.2, 0.8, 0.2, 0.2);
+        }
+        #fimg img{
+            width: 100%;
+            height: 100%;
+        }
+        #fcrcl{
+            height:300px;
+            width: 300px;
+            position: absolute;
+            top:560px;
+            left:710px;
+            border-radius: 50%;
+            box-shadow: 20px 10px 15px rgba(0.2, 0.8, 0.2, 0.2);
+        }
+        #fcrcl img{
+            width: 100%;
+            height:100%;
+            border-radius: 50%;
+        }
+        #text1{
+            position: absolute;
+            top: 300px;
+            font-size: 90px;
+            left: 178px;
+        }
+        #text2{
+            position: absolute;
+            top: 380px;
+            font-size: 90px;
+            left: 170px;
+        }
+        #text3{
+            position:absolute;
+            top: 300px;
+            font-size: 90px;
+            left: 493px;
+            color: white;
+        }
+        #text4{
+            position:absolute;
+            top: 380px;
+            font-size: 90px;
+            left: 493px;
+            color: white;
+        }
+        #text5{
+            position: absolute;
+            top: 380px;
+            font-size: 20px;
+            left: 908px;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        #order{
+            position: absolute;
+            border-radius: 20px;
+            top: 720px;
+            width: 270px;
+            height: 44px;
+            left: 170px;
+            cursor: pointer;
+            font-size: 18px;
+            background-position: 20px;
+            background: rgb(248, 243, 243);
+        }
+       #text1a{
+               position: absolute;
+               top: 960px;
+               font-size: 43px;
+               left: 1140px;
+       }
+       #ct1{
+        position: absolute;
+        width: 370px;
+        height: 370px;
+        background-color: #fefafa;
+        border-radius: 50%;
+        top: 1100px;
+        left: 90px;
+        cursor: pointer;
+       } 
+       #ct1 img{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+       }  
+       #ct2{
+        width: 450px;
+        height:400px;
+        background-color: #0a0a0a;
+        position: absolute;
+        top: 1100px;
+        left:800px;
+        cursor: pointer;
+       }
+       #ct2 img{
+        width: 100%;
+        height: 100%;
+       }
+       #ct3{
+        width: 330px;
+        height: 450px;
+        background-color: #0a0a0a;
+        position: absolute;
+        top: 1600px;
+        left: 90px;
+        cursor: pointer;
+       }
+       #ct3 img{
+        width: 100%;
+        height: 100%;
+       }
+       #ct4{
+        width: 230px;
+        height: 350px;
+        background-color: #0a0a0a;
+        position: absolute;
+        top: 1700px;
+        left: 590px;
+        cursor: pointer;
+       }
+       #ct4 img{
+        width: 100%;
+        height: 100%;
+       }
+       #ct5{
+        position: absolute;
+        width: 270px;
+        height: 270px;
+        background-color: #fefafa;
+        border-radius: 50%;
+        top: 1779px;
+        left: 975px;
+        cursor: pointer;
+       }
+       #ct5 img{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+       }
+       #view{
+        position: absolute;
+        top: 2140px;
+        left: 1150px;
+        width: 160px;
+        height: 30px;
+        font-size: 16px;
+        border-radius: 30px;
+        background: rgb(248, 243, 243);
+        cursor: pointer;
+        background-position: 20px;
+       }
+       #ct6{
+        position: absolute;
+        width: 530px;
+        height: 300px;
+        background-color: #0a0a0a;
+        top: 2300px;
+        left: 150px;
+        box-shadow: 20px 10px 15px rgba(0.2, 0.8, 0.2, 0.2);
+       }
+       #ct6 img{
+        width: 100%;
+        height: 100%;
+       }
+       #wed{
+        position: absolute;
+        top: -49px;
+        left: 630px;
+        font-size: 45px;
+
+        
+       }
+       #wed1{
+        position: absolute;
+        top: 100px;
+        left: 625px;
+        font-size: 18px;
+       }
+       #ct7{
+        position: absolute;
+        width: 530px;
+        height: 300px;
+        background-color: #0a0a0a;
+        top: 2670px;
+        left: 150px;
+        box-shadow: 20px 10px 15px rgba(0.2, 0.8, 0.2, 0.2);
+       }
+       #ct7 img{
+        width: 100%;
+        height: 100%;
+       }
+       #pro{
+        position: absolute;
+        top: 2625px;
+        left: 770px;
+        font-size: 45px;
+       }
+       #pro1{
+        position: absolute;
+        top: 2775px;
+        left: 765px;
+        font-size: 18px;
+       }
+       #ct8{
+        position: absolute;
+        width: 530px;
+        height: 300px;
+        background-color: #0a0a0a;
+        top: 3040px;
+        left: 150px;
+        box-shadow: 20px 10px 15px rgba(0.2, 0.8, 0.2, 0.2);
+       }
+       #ct8 img{
+        width: 100%;
+        height: 100%;
+       }
+       #well{
+        position: absolute;
+        top: 3000px;
+        left: 770px;
+        font-size: 45px;
+       }
+       #well1{
+        position: absolute;
+        top: 3155px;
+        left: 765px;
+        font-size: 19px;
+       }
+       #text6{
+        position: absolute;
+        top: 3400px;
+        left: 80px;
+        font-size: 40px;
+       }
+       #us{
+        position: absolute;
+        width: 320px;
+        height: 320px;
+        background-color: #0a0a0a;
+        top: 3570px;
+        left: 390px;
+       
+       }
+       #us img{
+        width: 100%;
+        height: 100%;
+       }
+       #us2{
+        position: absolute;
+        width: 320px;
+        height: 320px;
+        background-color: #0a0a0a;
+        top: 3570px;
+        left: 850px;
+        
+       
+       }
+       #us2 img{
+        width: 100%;
+        height: 100%;
+       }
+       #us3{
+        position: absolute;
+        top: 3920px;
+        left: 387px;
+        font-size: 18px;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+       }
+        a{
+            text-decoration: none;
+            color: #0a0a0a;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <p style="position:absolute;font-size:40px;top:1px;left:540px;">𝓕𝓵𝓸𝓻𝓪𝓵 𝓕𝓵𝓮𝓮𝓽</p>
+        <hr style="position:relative;top:100px;background-color:black;height:4px;width:100%;margin:0px;">
+        <nav id="nv1">
+            <ol><a style="position: absolute;top:135px;left:180px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-weight:100;font-size:22px;cursor:pointer;">HOME</a></ol>
+            <ol><a style="position: absolute;top:135px;left:300px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-weight:100;font-size:22px;cursor:pointer;" href="{{ url_for('cat') }}">CATALOGUE</a></ol>
+            <ol><a style="position: absolute;top:135px;left:500px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-weight:100;font-size:22px;cursor:pointer;" href="{{ url_for('cart') }}">CART</a></ol>
+            <ol><a style="position: absolute;top:135px;left:630px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-weight:100;font-size:22px;cursor:pointer;" href="{{ url_for('logout') }}">LOGOUT</a></ol>
+   
+        </nav>
+    </header>
+    <div>
+        <div id="fimg">
+            <img src="../static/phome.jpg">
+        </div>
+        <div id="fcrcl">
+            <img src="../static/phome2.jpg">
+        </div>
+        <div>
+        <p id="text1">FLOWE</p>
+        <p id="text2">DELIVE</p>
+        <p id="text3">R</p>
+        <p id="text4">RY</p>
+        <p id="text5"><i>Bringing Fresh Blooms to Your Doorstep & <br> Experience the Beauty of Nature with <br>Every Delivery...!</i></p>
+        </div>
+        <div>
+            <form action="{{url_for('cat')}}" method="post">
+            <button type="submit" id="order"><b>Order Now</b></button>
+            </form>
+        </div>
+        <div>
+            <p id="text1a">ℭ𝔞𝔱𝔞𝔩𝔬𝔤𝔲𝔢</p>
+            <hr style="width:1110px;position:absolute;top:1022px;height:1px;background-color:black;">
+            <div id="ct1">
+               <img src="../static/pcat1.jpg">
+               <p style="position: absolute;top:370px;font-weight:500;">PYRENEES</p>
+               <p style="position: absolute;top:370px;left:270px;">Rs 200.00</p>
+            </div>
+            <div id="ct2">
+               <img src="../static/pcat2 (1).jpg">
+               <p>SAGITTARIUS</p>
+               <P style="position: absolute;top:404px;left:380px;">RS 350.00</P>
+            </div>
+            <div id="ct3">
+                <img src="../static/pcat3.jpg">
+                <p>CANNES</p>
+                <p style="position: absolute;top:455px;left:264px">Rs 150.00</p>
+            </div>
+            <div id="ct4">
+                <img src="../static/pcat4 (1).jpg">
+                <p>LIBRA</p>
+                <p style="position: absolute;top:355px;left:165px">Rs 349.00</p>
+            </div>
+            <div id="ct5">
+                <img src="../static/pcat5 (1).jpg">
+                <p>BROOME</p>
+                <p style="position: absolute;top:275px;left:200px">Rs 149.00</p>
+
+            </div>
+
+        </div>
+        <hr style="position:absolute;top:180px;background-color:black;height:4px;width:99%;margin:0px;">
+        <hr style="width:1110px;position:absolute;top:2152px;height:2px;background-color:black;">
+        <form action="{{url_for('view')}}" method="post">
+           <button type="submit" id="view">View all</button>
+        </form>
+        
+    </div>
+    <div>
+        <div id="ct6">
+            <img src="../static/flower2.jpg">
+            <p id="wed">𝑭𝒍𝒐𝒘𝒆𝒓 𝒇𝒐𝒓&nbsp;𝒂&nbsp;𝒘𝒆𝒅𝒅𝒊𝒏𝒈</p>
+            <p id="wed1"><i>After&nbsp;many&nbsp;months&nbsp;of&nbsp;dreaming&nbsp;and&nbsp;planning&nbsp;your&nbsp;perfect&nbsp;day,<br>expectations are high.Everything must be "just so".Your wedding flowers have to be perfect </i></p>
+
+        </div>
+        <div id="ct7">
+            <img src="../static/flower3.jpg">
+
+        </div>
+        <div>
+            <p id="pro">𝑭𝒍𝒐𝒘𝒆𝒓 <br>𝒇𝒐𝒓 𝒂 𝒑𝒓𝒐𝒑𝒐𝒔𝒂𝒍</p>
+            <p id="pro1"><i>Presenting our "Forever Love" rose—a profound symbol of your journey together. With rich, velvety petals, it embodies passion and devotion. Its fragrance carries the essence of cherished moments. Choose "Forever Love" <br>for a proposal that speaks volumes of your commitment.</i></p>
+        </div>
+        <div id="ct8">
+            <img src="../static/fllower4 (2).jpg">
+        </div>
+        <div>
+            <p id="well">𝑭𝒍𝒐𝒘𝒆𝒓<br> 𝒇𝒐𝒓 𝒂 𝒇𝒂𝒓𝒆𝒘𝒆𝒍𝒍 </p>
+            <p id="well1"><i> Bid goodbye to someone leaving for a new adventure or opportunity with flowers that convey good wishes and positive vibes.</i></p>
+        </div>
+        <div>
+            <p id="text6">𝑨𝒃𝒐𝒖𝒕 𝑼𝒔</p>
+            <hr style="width:90%;position:absolute;top:3482px;left:50px;height:2px;background-color:black;">
+        </div>
+    </div>
+    <div>
+        <div id="us">
+            <img src="../static/flower7.jpg">
+             
+        </div>
+        <div id="us2">
+            <img src="../static/flower8.jpg">
+
+        </div>
+        <div id="us3"><i>We are glad to welcome you in our Flower shop. We have been delivering flowers and gifts for over 10 years and we have vast experience in organizing congratulations at high level! We also understand that our work is not only delivery of flowers, but first <br>of all the delivery of a good mood, the transfer of your emotions to dear people at a distance!</i></div>
+    </div>
+    
+</body>
+</html>
